@@ -1,0 +1,23 @@
+{
+  "name": "@pdu2022/pay-with-flexbase.git",
+  "version": "1.0.0",
+  "description": "A custom web component that redirects to Flexbase for checkout, for use with partnered vendors.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flexbase-eng/pay-with-flexbase.git"
+  },
+  "keywords": [
+    "Flexbase",
+    "flexbase"
+  ],
+  "author": "Flexbase",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flexbase-eng/pay-with-flexbase/issues"
+  },
+  "homepage": "https://github.com/flexbase-eng/pay-with-flexbase#readme"
+}
