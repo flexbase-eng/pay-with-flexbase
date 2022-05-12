@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/flexbase-eng/pay-with-flexbase/issues"
   },
-  "homepage": "https://github.com/flexbase-eng/pay-with-flexbase#readme"
+  "homepage": "https://github.com/flexbase-eng/pay-with-flexbase#readme",
+  "publishConfig": {
+    "@pdu2022:registry": "https://npm.pkg.github.com"
+  }
 }
