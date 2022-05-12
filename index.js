@@ -14,7 +14,7 @@ style.textContent = `#flexbase-pay {
 
 class PayWithFlexbase extends HTMLElement {
     static get observedAttributes() {
-        return ["client", "amount", "callback"];
+        return ["apikey", "amount", "callback"];
     }
 
     constructor() {
@@ -24,7 +24,7 @@ class PayWithFlexbase extends HTMLElement {
         this.shadowRoot.querySelector(
             "a"
         ).href = `https://www.our-site.com/credit/pay?apiKey=${encodeURIComponent(
-            this.getAttribute("client")
+            this.getAttribute("apikey")
         )}&amount=${encodeURIComponent(
             this.getAttribute("amount")
         )}&callback=${encodeURIComponent(this.getAttribute("callback"))}`;
@@ -34,18 +34,18 @@ class PayWithFlexbase extends HTMLElement {
         this.shadowRoot.querySelector(
             "a"
         ).href = `https://www.our-site.com/credit/pay?apiKey=${this.getAttribute(
-            "client"
+            "apikey"
         )}&amount=${this.getAttribute("amount")}&callback=${this.getAttribute(
             "callback"
         )}`;
     }
 
-    get client() {
-        return this.getAttribute("client");
+    get apikey() {
+        return this.getAttribute("apikey");
     }
 
-    set client(client) {
-        this.setAttribute("client", client);
+    set apikey(apikey) {
+        this.setAttribute("apikey", apikey);
         this.updateHref();
     }
 

@@ -18,7 +18,7 @@ Use the <pay-with-flexbase></pay-with-flexbase> element in your html/jsx.
 
 <pay-with-flexbase></pay-with-flexbase> attributes :
 
-    client - The APIKey provided to the partnering vendor
+    apikey - The APIKey provided to the partnering vendor
     amount - The amount of money in the transaction
     callback - The relative url path to be redirected to after a failure/success
 
