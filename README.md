@@ -22,3 +22,5 @@ Use the <pay-with-flexbase></pay-with-flexbase> element in your html/jsx.
     amount - The amount of money in the transaction
     callback - The relative url path to be redirected to after a failure/success
 
+Note: Any html attribute updates or javascript property updates to the above 3 fields
+will automatically update the url in the link.
