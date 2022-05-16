@@ -1,5 +1,5 @@
 {
-  "name": "@flexbase-eng/pay-with-flexbase.git",
+  "name": "@flexbase-eng/pay-with-flexbase",
   "version": "1.0.0",
   "description": "A custom web component that redirects to Flexbase for checkout, for use with partnered vendors.",
   "main": "index.js",

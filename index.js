@@ -1,15 +1,27 @@
 const template = document.createElement("template");
-template.innerHTML = `<div id="flexbase-pay"><a href="https://www.our-site.com">Pay With Flexbase</a></div>`;
+template.innerHTML = `<div id="flexbase-pay"><a href="https://www.our-site.com" id="btn-bnpl">
+  <div style="font-size: 17px;">Pay in 60 days with</div> 
+  <div style="font-size: 23px;">flexbase</div>
+  </a>
+</div>`;
 
 const style = document.createElement("style");
 
-style.textContent = `#flexbase-pay {
-  width: 325px;
-  height: 50px;
-  border-style: solid;
-  border-color: #FF4234;
-  border-radius: 10px;
-  background-image: linear-gradient(to bottom right, #FF4338, #FF7F75);
+style.textContent = `#btn-bnpl {
+   width: 366px;
+   height: 52.18px;
+   background: linear-gradient(124.59deg, #FF5745 29.59%, #FF8B7E 100.08%);
+   display: flex;
+   color: white;
+   align-items: center;
+   justify-content: space-between;
+   font-weight: 700;
+   border-radius: 8px;
+   border-color: transparent;
+   padding-left: 20px;
+   padding-right: 20px;
+   font-family: sans-serif;
+   text-decoration: none;
 }`;
 
 class PayWithFlexbase extends HTMLElement {
@@ -73,5 +85,3 @@ class PayWithFlexbase extends HTMLElement {
 }
 
 export default PayWithFlexbase;
-
-// window.customElements.define("pay-with-flexbase", PayWithFlexbase);
