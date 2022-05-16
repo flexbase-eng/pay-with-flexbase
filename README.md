@@ -9,7 +9,7 @@ yarn or npm install
 If typescript, add this to a .d.ts module declaration file in your project
 
 ```
-declare module '@flexbase-eng/pay-with-flexbase.git' {
+declare module '@flexbase-eng/pay-with-flexbase' {
     declare const PayWithFlexbase: CustomElementConstructor;
     export default PayWithFlexbase
 }
