@@ -45,4 +45,7 @@ customElements.get('pay-with-flexbase') || customElements.define('pay-with-flexb
 
 step 3:
 Now you can use the custom element
+```
 <pay-with-flexbase apikey="yourKey" amount="99.99" callback="/done" />
+```
+
