@@ -26,7 +26,7 @@ style.textContent = `#btn-bnpl {
 
 class PayWithFlexbase extends HTMLElement {
     static get observedAttributes() {
-        return ["apikey", "amount", "callback"];
+        return ["apikey", "amount", "callback", 'session'];
     }
 
     constructor() {
@@ -39,7 +39,10 @@ class PayWithFlexbase extends HTMLElement {
             this.getAttribute("apikey")
         )}&amount=${encodeURIComponent(
             this.getAttribute("amount")
-        )}&callback=${encodeURIComponent(this.getAttribute("callback"))}`;
+        )}&callback=${encodeURIComponent(
+            this.getAttribute("callback")
+        )}&session=${encodeURIComponent(
+            this.getAttribute("session"))}`;
     }
 
     updateHref() {
@@ -47,8 +50,12 @@ class PayWithFlexbase extends HTMLElement {
             "a"
         ).href = `https://www.our-site.com/credit/pay?apiKey=${this.getAttribute(
             "apikey"
-        )}&amount=${this.getAttribute("amount")}&callback=${this.getAttribute(
+        )}&amount=${this.getAttribute(
+            "amount"
+        )}&callback=${this.getAttribute(
             "callback"
+        )}&session=${this.getAttribute(
+            "session"
         )}`;
     }
 
@@ -76,6 +83,15 @@ class PayWithFlexbase extends HTMLElement {
 
     set callback(callback) {
         this.setAttribute("callback", callback);
+        this.updateHref();
+    }
+
+    get session() {
+        return this.getAttribute("session");
+    }
+
+    set session(session) {
+        this.setAttribute("session", session);
         this.updateHref();
     }
 
