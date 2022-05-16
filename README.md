@@ -35,7 +35,8 @@ declare global {
 interface PayWithFlexbaseProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
     apikey: string,
     amount: string,
-    callback: string
+    callback: string,
+    session: string
 }
 ```
 Now we have to let our browser know that we have a custom element
@@ -46,6 +47,6 @@ customElements.get('pay-with-flexbase') || customElements.define('pay-with-flexb
 step 3:
 Now you can use the custom element
 ```
-<pay-with-flexbase apikey="yourKey" amount="99.99" callback="/done" />
+<pay-with-flexbase apikey="yourKey" amount="99.99" callback="/done" session="yourSession" />
 ```
 
