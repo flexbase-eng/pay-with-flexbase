@@ -48,7 +48,7 @@ class PayWithFlexbase extends HTMLElement {
     updateHref() {
         this.shadowRoot.querySelector(
             "a"
-        ).href = `https://www.our-site.com/credit/pay?apiKey=${this.getAttribute(
+        ).href = `https://www.dev.flexbase.app/credit/pay?apiKey=${this.getAttribute(
             "apikey"
         )}&amount=${this.getAttribute(
             "amount"
