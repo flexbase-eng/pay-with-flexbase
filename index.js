@@ -1,5 +1,5 @@
 const template = document.createElement("template");
-template.innerHTML = `<div id="flexbase-pay"><a href="https://www.dev.flexbase.app" id="btn-bnpl">
+template.innerHTML = `<div id="flexbase-pay"><a href="https://dev.flexbase.app" id="btn-bnpl">
   <div style="font-size: 17px;">Pay in 60 days with</div> 
   <div style="font-size: 23px;">flexbase</div>
   </a>
