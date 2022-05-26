@@ -1,6 +1,6 @@
 {
   "name": "@flexbase-eng/pay-with-flexbase",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "A custom web component that redirects to Flexbase for checkout, for use with partnered vendors.",
   "main": "index.js",
   "scripts": {
