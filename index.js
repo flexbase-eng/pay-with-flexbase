@@ -35,7 +35,7 @@ class PayWithFlexbase extends HTMLElement {
         this.shadowRoot.appendChild(template.content.cloneNode(true));
         this.shadowRoot.querySelector(
             "a"
-        ).href = `https://www.our-site.com/credit/pay?apiKey=${encodeURIComponent(
+        ).href = `https://dev.flexbase.app/credit/pay?apiKey=${encodeURIComponent(
             this.getAttribute("apikey")
         )}&amount=${encodeURIComponent(
             this.getAttribute("amount")
@@ -48,7 +48,7 @@ class PayWithFlexbase extends HTMLElement {
     updateHref() {
         this.shadowRoot.querySelector(
             "a"
-        ).href = `https://www.dev.flexbase.app/credit/pay?apiKey=${this.getAttribute(
+        ).href = `https://dev.flexbase.app/credit/pay?apiKey=${this.getAttribute(
             "apikey"
         )}&amount=${this.getAttribute(
             "amount"
