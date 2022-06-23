@@ -7,7 +7,8 @@ template.innerHTML = `<div id="flexbase-pay"><a href="https://dev.flexbase.app" 
 
 const style = document.createElement("style");
 
-style.textContent = `#btn-bnpl {
+style.textContent = `
+#btn-bnpl {
    width: 366px;
    height: 52.18px;
    background: linear-gradient(124.59deg, #FF5745 29.59%, #FF8B7E 100.08%);
@@ -22,7 +23,12 @@ style.textContent = `#btn-bnpl {
    padding-right: 20px;
    font-family: sans-serif;
    text-decoration: none;
-}`;
+}
+
+@media screen and (max-width: 480px) {
+  #btn-bnpl {
+      width:252px;
+  }`;
 
 class PayWithFlexbase extends HTMLElement {
     static get observedAttributes() {
@@ -31,7 +37,7 @@ class PayWithFlexbase extends HTMLElement {
 
     constructor() {
         super();
-        this.attachShadow({ mode: "open" }).appendChild(style);
+        this.attachShadow({mode: "open"}).appendChild(style);
         this.shadowRoot.appendChild(template.content.cloneNode(true));
         this.shadowRoot.querySelector(
             "a"
