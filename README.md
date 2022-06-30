@@ -1,54 +1,42 @@
-# pay-with-flexbase
-Reuseable 'Buy Now Pay Later' web component for distribution to partners
+# Pay with Flexbase <font size="1">powered by [Flexbase](https://flexbase.app)</font>
 
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=flexbase-eng_pay-with-flexbase&metric=coverage)](https://sonarcloud.io/summary/new_code?id=flexbase-eng_pay-with-flexbase) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=flexbase-eng_pay-with-flexbase&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=flexbase-eng_pay-with-flexbase)
 
-How to use:
 
-step 1: 
+## Becoming a partner
 
-yarn or npm install
-If typescript, add this to a .d.ts module declaration file in your project
+Please contact [Flexbase](https://www.flexbase.app/merchant) to request information on becoming an integration partner.
 
-```
-declare module '@flexbase-eng/pay-with-flexbase' {
-    declare const PayWithFlexbase: CustomElementConstructor;
-    export default PayWithFlexbase
-}
-```
+## Getting started
 
+Flexbase has provided a lightweight package that implements a component that can be used with any modern javascript framework. 
 
-step 2:
-Import the class
-```
-import { default as PayWithFlexbase } from '@flexbase-eng/pay-with-flexbase'
-```
+### Installation using a package manager
 
-If typescript/React, we'll need to declare the custom html component as an intrinsic element
-```
-declare global {
-    namespace JSX {
-        interface IntrinsicElements {
-            'pay-with-flexbase': PayWithFlexbaseProps
-        }
-    }
-}
+`yarn add pay-with-flexbase`
 
-interface PayWithFlexbaseProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
-    apikey: string,
-    amount: string,
-    callback: string,
-    session: string
-}
-```
-Now we have to let our browser know that we have a custom element
-```
-customElements.get('pay-with-flexbase') || customElements.define('pay-with-flexbase', PayWithFlexbase);
+or
+
+`npm i pay-with-flexbase`
+
+### Usage
+
+```ts
+import 'pay-with-flexbase';
+
+const apiKey = "api key";
+const amount = 100.30;
+const callback = "/done";
+const session = "session id";
+
+<pay-with-flexbase apikey={apiKey} amount={amount} callback={callback} session={session} />
+
 ```
 
-step 3:
-Now you can use the custom element
-```
-<pay-with-flexbase apikey="yourKey" amount="99.99" callback="/done" session="yourSession" />
-```
+Attribute | Type | Description
+--- | --- | ---
+apiKey | `string` | This is the api key provided to you by Flexbase
+amount | `number` | The amount of the transaction
+callback | `string` | The return URL **path** that Flexbase will redirect after completion by the user.
+session | `string` | Identifies the checkout session
 
