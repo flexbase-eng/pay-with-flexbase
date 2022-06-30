@@ -1,6 +1,8 @@
 # pay-with-flexbase
 Reuseable 'Buy Now Pay Later' web component for distribution to partners
 
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=flexbase-eng_pay-with-flexbase&metric=coverage)](https://sonarcloud.io/summary/new_code?id=flexbase-eng_pay-with-flexbase) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=flexbase-eng_pay-with-flexbase&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=flexbase-eng_pay-with-flexbase)
+
 How to use:
 
 step 1: 
