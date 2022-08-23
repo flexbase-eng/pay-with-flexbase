@@ -45,12 +45,12 @@ export class PayWithFlexbase extends HTMLElement {
         value ? this.setAttribute('apikey', value) : this.removeAttribute('apikey');
     }
 
-    get amount(): number | null {
-        return Number(this.getAttribute('amount'));
+    get request(): string | null {
+        return this.getAttribute('request');
     }
 
-    set amount(value) {
-        value ? this.setAttribute('amount', value.toString()) : this.removeAttribute('amount');
+    set request(value) {
+        value ? this.setAttribute('request', value) : this.removeAttribute('request');
     }
 
     get callback() {
@@ -84,13 +84,13 @@ export class PayWithFlexbase extends HTMLElement {
 
     protected buildUrl(): string {
         const apikey = this.apikey || '';
-        const amount = this.amount || 0;
+        const request = this.request || '';
         const callback = this.callback || '';
         const session = this.session || '';
 
         const q = this.buildQuery({
             apikey,
-            amount,
+            request,
             callback,
             session,
         });

@@ -46,7 +46,7 @@ test("PayWithFlexbase attributes", () => {
     const rendered = el as PayWithFlexbase;
 
     expect(rendered.apikey).toBe(apikey);
-    expect(rendered.amount).toBe(amount);
+    expect(rendered.request).toBe(amount);
     expect(rendered.callback).toBe(callback);
     expect(rendered.session).toBe(session);
     expect(rendered.flexbaseDomain).toBe(flexbaseDomain);
@@ -78,7 +78,7 @@ test("PayWithFlexbase clear attributes", () => {
     const rendered = el as PayWithFlexbase;
 
     rendered.apikey = null;
-    rendered.amount = null;
+    rendered.request = null;
     rendered.callback = null;
     rendered.session = null;
     rendered.flexbaseDomain = null;

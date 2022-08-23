@@ -1,6 +1,6 @@
 export interface PayWithFlexbaseProps {
     apikey: string;
-    amount: number;
+    request: string;
     callback: string;
     session: string;
     flexbaseDomain?: string;
