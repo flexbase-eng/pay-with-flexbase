@@ -14,7 +14,7 @@ test("PayWithFlexbase null attributes", () => {
     expect(rendered).not.toBeNull();
 
     expect(rendered!.getAttribute('apikey')).toBeNull();
-    expect(rendered!.getAttribute('amount')).toBeNull();
+    expect(rendered!.getAttribute('request')).toBeNull();
     expect(rendered!.getAttribute('callback')).toBeNull();
     expect(rendered!.getAttribute('session')).toBeNull();
     expect(rendered!.getAttribute('flexbaseDomain')).toBeNull();
@@ -26,13 +26,13 @@ test("PayWithFlexbase attributes", () => {
 
     const flexbaseDomain = "http://localhost"
     const apikey = "testApiKey";
-    const amount = 1.2;
+    const request = '123-423235-23232323';
     const session = "testSession";
     const callback = "/callback";
 
     const testEl = () => {
         return (
-            <pay-with-flexbase flexbaseDomain={flexbaseDomain} apikey={apikey} amount={amount} session={session} callback={callback} />
+            <pay-with-flexbase flexbaseDomain={flexbaseDomain} apikey={apikey} request={request} session={session} callback={callback} />
         )
     };
 
@@ -46,7 +46,7 @@ test("PayWithFlexbase attributes", () => {
     const rendered = el as PayWithFlexbase;
 
     expect(rendered.apikey).toBe(apikey);
-    expect(rendered.request).toBe(amount);
+    expect(rendered.request).toBe(request);
     expect(rendered.callback).toBe(callback);
     expect(rendered.session).toBe(session);
     expect(rendered.flexbaseDomain).toBe(flexbaseDomain);
@@ -58,13 +58,13 @@ test("PayWithFlexbase clear attributes", () => {
 
     const flexbaseDomain = "http://localhost"
     const apikey = "testApiKey";
-    const amount = 1.2;
+    const request = '123-423235-23232323';
     const session = "testSession";
     const callback = "/callback";
 
     const testEl = () => {
         return (
-            <pay-with-flexbase flexbaseDomain={flexbaseDomain} apikey={apikey} amount={amount} session={session} callback={callback} />
+            <pay-with-flexbase flexbaseDomain={flexbaseDomain} apikey={apikey} request={request} session={session} callback={callback} />
         )
     };
 
@@ -84,7 +84,7 @@ test("PayWithFlexbase clear attributes", () => {
     rendered.flexbaseDomain = null;
 
     expect(rendered.hasAttribute('apikey')).toBe(false);
-    expect(rendered.hasAttribute('amount')).toBe(false);
+    expect(rendered.hasAttribute('request')).toBe(false);
     expect(rendered.hasAttribute('callback')).toBe(false);
     expect(rendered.hasAttribute('session')).toBe(false);
     expect(rendered.hasAttribute('flexbaseDomain')).toBe(false);
